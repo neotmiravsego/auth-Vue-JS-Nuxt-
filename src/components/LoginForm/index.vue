@@ -1,12 +1,10 @@
 <template>
   <form class="container-form">
     <div class="form-group">
-      <label></label>
       <input type="email" v-model="user.email" required />
     </div>
 
     <div class="form-group">
-      <label></label>
       <input type="password" v-model="user.password" required />
     </div>
     <button class="button-login" @click="sendData()">Login</button>
