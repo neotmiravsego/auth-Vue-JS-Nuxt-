@@ -29,7 +29,6 @@ export default {
         })
         .then(data => {
           this.userInf = data;
-          console.log(this.userInf);
         });
     }
   }

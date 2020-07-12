@@ -27,14 +27,11 @@ export default {
   },
   methods: {
     sendData() {
-      console.log(this.user.email);
       fetch("./auth.json")
         .then(response => {
           return response.json();
         })
         .then(data => {
-          console.log(data);
-          console.log(this.user);
           if (
             data.email === this.user.email &&
             data.password === this.user.password
@@ -46,7 +43,13 @@ export default {
             this.userInf = true;
           }
         });
+    },
+    info() {
+      alert("email:ivanIvanov@mail.ru, password: 12345");
     }
+  },
+  mounted() {
+    this.info();
   }
 };
 </script>
@@ -82,8 +85,5 @@ input {
   letter-spacing: 1px;
   font-size: 20px;
   cursor: pointer;
-}
-p {
-  text-align: center;
 }
 </style>
